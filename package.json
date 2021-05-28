@@ -1,6 +1,6 @@
 {
   "name": "jssdk",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/@bjh/*"
   ],

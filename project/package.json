@@ -1,0 +1,8 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@bjh/cli-service": "5.0.0-beta.0"
+  }
+}
