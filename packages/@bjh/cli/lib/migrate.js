@@ -8,7 +8,7 @@ const {
 
   loadModule,
   resolvePluginId
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const Migrator = require('./Migrator')
 const PackageManager = require('./util/ProjectPackageManager')

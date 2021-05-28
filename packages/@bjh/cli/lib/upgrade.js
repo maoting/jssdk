@@ -1,5 +1,5 @@
 const inquirer = require('inquirer')
-const { error } = require('@vue/cli-shared-utils')
+const { error } = require('@bjh/cli-shared-utils')
 
 const Upgrader = require('./Upgrader')
 const confirmIfGitDirty = require('./util/confirmIfGitDirty')

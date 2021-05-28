@@ -4,7 +4,7 @@ const inquirer = require('inquirer')
 const Creator = require('./Creator')
 const { clearConsole } = require('./util/clearConsole')
 const { getPromptModules } = require('./util/createTools')
-const { chalk, error, stopSpinner, exit } = require('@vue/cli-shared-utils')
+const { chalk, error, stopSpinner, exit } = require('@bjh/cli-shared-utils')
 const validateProjectName = require('validate-npm-package-name')
 
 async function create (projectName, options) {

@@ -1,4 +1,4 @@
-const { installedBrowsers } = require('@vue/cli-shared-utils')
+const { installedBrowsers } = require('@bjh/cli-shared-utils')
 
 module.exports = cli => {
   cli.injectFeature({

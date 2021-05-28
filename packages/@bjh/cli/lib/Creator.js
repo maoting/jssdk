@@ -14,7 +14,7 @@ const { formatFeatures } = require('./util/features')
 const loadLocalPreset = require('./util/loadLocalPreset')
 const loadRemotePreset = require('./util/loadRemotePreset')
 const generateReadme = require('./util/generateReadme')
-const { resolvePkg, isOfficialPlugin } = require('@vue/cli-shared-utils')
+const { resolvePkg, isOfficialPlugin } = require('@bjh/cli-shared-utils')
 
 const {
   defaults,
@@ -41,7 +41,7 @@ const {
 
   exit,
   loadModule
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const isManualMode = answers => answers.preset === '__manual__'
 
@@ -94,12 +94,12 @@ module.exports = class Creator extends EventEmitter {
     // clone before mutating
     preset = cloneDeep(preset)
     // inject core service
-    preset.plugins['@vue/cli-service'] = Object.assign({
+    preset.plugins['@bjh/cli-service'] = Object.assign({
       projectName: name
     }, preset)
 
     if (cliOptions.bare) {
-      preset.plugins['@vue/cli-service'].bare = true
+      preset.plugins['@bjh/cli-service'].bare = true
     }
 
     // legacy support for router
@@ -374,7 +374,7 @@ module.exports = class Creator extends EventEmitter {
   // { id: options } => [{ id, apply, options }]
   async resolvePlugins (rawPlugins, pkg) {
     // ensure cli-service is invoked first
-    rawPlugins = sortObject(rawPlugins, ['@vue/cli-service'], true)
+    rawPlugins = sortObject(rawPlugins, ['@bjh/cli-service'], true)
     const plugins = []
     for (const id of Object.keys(rawPlugins)) {
       const apply = loadModule(`${id}/generator`, this.context) || (() => {})

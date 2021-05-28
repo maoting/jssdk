@@ -10,7 +10,7 @@ const {
   resolvePluginId,
 
   loadModule
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const Generator = require('./Generator')
 

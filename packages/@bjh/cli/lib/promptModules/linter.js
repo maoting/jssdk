@@ -1,5 +1,5 @@
 module.exports = cli => {
-  const { chalk, hasGit } = require('@vue/cli-shared-utils')
+  const { chalk, hasGit } = require('@bjh/cli-shared-utils')
 
   cli.injectFeature({
     name: 'Linter / Formatter',

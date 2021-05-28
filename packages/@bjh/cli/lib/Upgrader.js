@@ -15,7 +15,7 @@ const {
 
   loadModule,
   resolveModule
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const tryGetNewerRange = require('./util/tryGetNewerRange')
 const getPkg = require('./util/getPkg')
@@ -146,10 +146,10 @@ module.exports = class Upgrader {
     const upgradable = []
 
     // get current deps
-    // filter @vue/cli-service, @vue/cli-plugin-* & vue-cli-plugin-*
+    // filter @bjh/cli-service, @vue/cli-plugin-* & vue-cli-plugin-*
     for (const depType of ['dependencies', 'devDependencies', 'optionalDependencies']) {
       for (const [name, range] of Object.entries(this.pkg[depType] || {})) {
-        if (name !== '@vue/cli-service' && !isPlugin(name)) {
+        if (name !== '@bjh/cli-service' && !isPlugin(name)) {
           continue
         }
 
@@ -169,9 +169,9 @@ module.exports = class Upgrader {
         }
 
         if (semver.lt(installed, latest)) {
-          // always list @vue/cli-service as the first one
+          // always list @bjh/cli-service as the first one
           // as it's depended by all other plugins
-          if (name === '@vue/cli-service') {
+          if (name === '@bjh/cli-service') {
             upgradable.unshift({ name, installed, wanted, latest })
           } else {
             upgradable.push({ name, installed, wanted, latest })

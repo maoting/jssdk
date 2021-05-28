@@ -1,7 +1,7 @@
 const fs = require('fs-extra')
 const path = require('path')
 const homedir = require('os').homedir()
-const { get, set, unset, error, launch } = require('@vue/cli-shared-utils')
+const { get, set, unset, error, launch } = require('@bjh/cli-shared-utils')
 
 async function configure (value, options) {
   const file = path.resolve(homedir, '.vuerc')

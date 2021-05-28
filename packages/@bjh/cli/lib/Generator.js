@@ -15,10 +15,10 @@ const {
   matchesPluginId,
 
   loadModule
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 const ConfigTransform = require('./ConfigTransform')
 
-const logger = require('@vue/cli-shared-utils/lib/logger')
+const logger = require('@bjh/cli-shared-utils/lib/logger')
 const logTypes = {
   log: logger.log,
   info: logger.info,
@@ -139,7 +139,7 @@ module.exports = class Generator {
       .concat(Object.keys(this.pkg.devDependencies || {}))
       .filter(isPlugin)
 
-    const cliService = plugins.find(p => p.id === '@vue/cli-service')
+    const cliService = plugins.find(p => p.id === '@bjh/cli-service')
     const rootOptions = cliService
       ? cliService.options
       : inferRootOptions(pkg)

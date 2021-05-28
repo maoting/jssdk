@@ -1,4 +1,4 @@
-const { error } = require('@vue/cli-shared-utils')
+const { error } = require('@bjh/cli-shared-utils')
 
 const Upgrader = require('./Upgrader')
 

@@ -1,4 +1,4 @@
-const { semver } = require('@vue/cli-shared-utils')
+const { semver } = require('@bjh/cli-shared-utils')
 const PackageManager = require('./ProjectPackageManager')
 const { loadOptions, saveOptions } = require('../options')
 

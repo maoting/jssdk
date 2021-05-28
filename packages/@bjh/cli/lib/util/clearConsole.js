@@ -4,7 +4,7 @@ const {
   semver,
 
   clearConsole
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const getGlobalInstallCommand = require('./getGlobalInstallCommand')
 

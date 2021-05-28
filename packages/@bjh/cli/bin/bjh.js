@@ -3,7 +3,7 @@
 // Check node version before requiring/doing anything else
 // The user may be on a very old node version
 
-const { chalk, semver } = require('@vue/cli-shared-utils')
+const { chalk, semver } = require('@bjh/cli-shared-utils')
 const requiredVersion = require('../package.json').engines.node
 const leven = require('leven')
 
@@ -17,7 +17,7 @@ function checkNodeVersion (wanted, id) {
   }
 }
 
-checkNodeVersion(requiredVersion, '@vue/cli')
+checkNodeVersion(requiredVersion, '@bjh/cli')
 
 const fs = require('fs')
 const path = require('path')
@@ -38,7 +38,7 @@ const program = require('commander')
 const loadCommand = require('../lib/util/loadCommand')
 
 program
-  .version(`@vue/cli ${require('../package').version}`)
+  .version(`@bjh/cli ${require('../package').version}`)
   .usage('<command> [options]')
 
 program
@@ -114,18 +114,18 @@ program
     require('../lib/util/runNpmScript')('build', process.argv.slice(3))
   })
 
-program
-  .command('ui')
-  .description('start and open the vue-cli ui')
-  .option('-H, --host <host>', 'Host used for the UI server (default: localhost)')
-  .option('-p, --port <port>', 'Port used for the UI server (by default search for available port)')
-  .option('-D, --dev', 'Run in dev mode')
-  .option('--quiet', `Don't output starting messages`)
-  .option('--headless', `Don't open browser on start and output port`)
-  .action((options) => {
-    checkNodeVersion('>=8.6', 'vue ui')
-    require('../lib/ui')(options)
-  })
+// program
+//   .command('ui')
+//   .description('start and open the vue-cli ui')
+//   .option('-H, --host <host>', 'Host used for the UI server (default: localhost)')
+//   .option('-p, --port <port>', 'Port used for the UI server (by default search for available port)')
+//   .option('-D, --dev', 'Run in dev mode')
+//   .option('--quiet', `Don't output starting messages`)
+//   .option('--headless', `Don't open browser on start and output port`)
+//   .action((options) => {
+//     checkNodeVersion('>=8.6', 'vue ui')
+//     require('../lib/ui')(options)
+//   })
 
 program
   .command('init <template> <app-name>')

@@ -8,7 +8,7 @@ const mergeDeps = require('./util/mergeDeps')
 const { runTransformation } = require('vue-codemod')
 const stringifyJS = require('./util/stringifyJS')
 const ConfigTransform = require('./ConfigTransform')
-const { semver, error, getPluginLink, toShortPluginId, loadModule } = require('@vue/cli-shared-utils')
+const { semver, error, getPluginLink, toShortPluginId, loadModule } = require('@bjh/cli-shared-utils')
 
 const isString = val => typeof val === 'string'
 const isFunction = val => typeof val === 'function'
@@ -47,7 +47,7 @@ class GeneratorAPI {
 
     /* eslint-disable no-shadow */
     this.pluginsData = generator.plugins
-      .filter(({ id }) => id !== `@vue/cli-service`)
+      .filter(({ id }) => id !== `@bjh/cli-service`)
       .map(({ id }) => ({
         name: toShortPluginId(id),
         link: getPluginLink(id)
@@ -136,7 +136,7 @@ class GeneratorAPI {
     }
 
     const servicePkg = loadModule(
-      '@vue/cli-service/package.json',
+      '@bjh/cli-service/package.json',
       this.generator.context
     )
 
@@ -157,7 +157,7 @@ class GeneratorAPI {
     if (semver.satisfies(this.cliServiceVersion, range, { includePrerelease: true })) return
 
     throw new Error(
-      `Require @vue/cli-service "${range}", but was loaded with "${this.cliServiceVersion}".`
+      `Require @bjh/cli-service "${range}", but was loaded with "${this.cliServiceVersion}".`
     )
   }
 
@@ -196,7 +196,7 @@ class GeneratorAPI {
       !options.file
     ) {
       if (hasReserved) {
-        const { warn } = require('@vue/cli-shared-utils')
+        const { warn } = require('@bjh/cli-shared-utils')
         warn(`Reserved config transform '${key}'`)
       }
       return

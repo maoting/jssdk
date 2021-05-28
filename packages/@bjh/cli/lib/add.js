@@ -5,7 +5,7 @@ const {
   semver,
   resolveModule,
   loadModule
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const getVersions = require('./util/getVersions')
 const PackageManager = require('./util/ProjectPackageManager')
@@ -14,7 +14,7 @@ const {
   error,
   resolvePluginId,
   isOfficialPlugin
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 const confirmIfGitDirty = require('./util/confirmIfGitDirty')
 
 async function add (pluginToAdd, options = {}, context = process.cwd()) {
@@ -23,7 +23,7 @@ async function add (pluginToAdd, options = {}, context = process.cwd()) {
   }
 
   // for `vue add` command in 3.x projects
-  const servicePkg = loadModule('@vue/cli-service/package.json', context)
+  const servicePkg = loadModule('@bjh/cli-service/package.json', context)
   if (servicePkg && semver.satisfies(servicePkg.version, '3.x')) {
     // special internal "plugins"
     if (/^(@vue\/)?router$/.test(pluginToAdd)) {
@@ -86,7 +86,7 @@ async function addRouter (context) {
   }])
   invoke.runGenerator(context, {
     id: 'core:router',
-    apply: loadModule('@vue/cli-service/generator/router', context),
+    apply: loadModule('@bjh/cli-service/generator/router', context),
     options
   })
 }
@@ -94,6 +94,6 @@ async function addRouter (context) {
 async function addVuex (context) {
   invoke.runGenerator(context, {
     id: 'core:vuex',
-    apply: loadModule('@vue/cli-service/generator/vuex', context)
+    apply: loadModule('@bjh/cli-service/generator/vuex', context)
   })
 }

@@ -29,7 +29,7 @@ const {
   log,
   warn,
   error
-} = require('@vue/cli-shared-utils')
+} = require('@bjh/cli-shared-utils')
 
 const { loadOptions } = require('../options')
 const { executeCommand } = require('./executeCommand')
