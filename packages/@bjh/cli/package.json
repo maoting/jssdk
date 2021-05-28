@@ -1,6 +1,6 @@
 {
   "name": "@bjh/cli",
-  "version": "5.0.0-beta.0",
+  "version": "0.0.1",
   "description": "Command line interface for rapid Vue.js development",
   "bin": {
     "bjh": "bin/bjh.js"
@@ -24,9 +24,9 @@
     "access": "public"
   },
   "dependencies": {
+    "@bjh/cli-shared-utils": "^0.0.1",
     "@types/ejs": "^3.0.6",
     "@types/inquirer": "^7.3.1",
-    "@bjh/cli-shared-utils": "^5.0.0-beta.0",
     "boxen": "^5.0.0",
     "commander": "^7.1.0",
     "debug": "^4.1.0",
@@ -53,11 +53,11 @@
     "slash": "^3.0.0",
     "strip-ansi": "^6.0.0",
     "validate-npm-package-name": "^3.0.0",
-    "yaml-front-matter": "^4.1.0",
-    "vue-codemod": "^0.0.5"
+    "vue-codemod": "^0.0.5",
+    "yaml-front-matter": "^4.1.0"
   },
   "devDependencies": {
-    "@bjh/cli-service": "^5.0.0-beta.0",
+    "@bjh/cli-service": "^0.0.1",
     "cmd-shim": "^4.1.0"
   },
   "engines": {
