@@ -1,7 +1,0 @@
-{
-  "packages": [
-    "packages/*",
-    "packages/@bjh/*"
-  ],
-  "version": "0.0.5"
-}
