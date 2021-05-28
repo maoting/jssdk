@@ -42,7 +42,7 @@
     "webpack": "^5.22.0",
     "yorkie": "^2.0.0"
   },
-  "description": "",
+  "description": "sdk",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -52,10 +52,13 @@
     "type": "git",
     "url": "git+https://github.com/maoting/jssdk.git"
   },
-  "author": "",
+  "author": "maoting",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maoting/jssdk/issues"
   },
-  "homepage": "https://github.com/maoting/jssdk#readme"
+  "homepage": "https://github.com/maoting/jssdk#readme",
+  "keywords": [
+    "sdk"
+  ]
 }
