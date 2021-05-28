@@ -8,8 +8,8 @@
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vue-cli.git",
-    "directory": "packages/@vue/cli"
+    "url": "git+https://github.com/maoting/jssdk.git",
+    "directory": "packages/@bjh/cli"
   },
   "keywords": [
     "cli"
