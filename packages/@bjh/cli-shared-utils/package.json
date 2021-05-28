@@ -1,5 +1,5 @@
 {
-  "name": "@vue/cli-shared-utils",
+  "name": "@bjh/cli-shared-utils",
   "version": "5.0.0-beta.0",
   "description": "shared utilities for vue-cli packages",
   "main": "index.js",
