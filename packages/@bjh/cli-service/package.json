@@ -1,6 +1,6 @@
 {
   "name": "@bjh/cli-service",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "local service for vue-cli projects",
   "main": "lib/Service.js",
   "typings": "types/index.d.ts",
@@ -24,7 +24,7 @@
   "homepage": "https://cli.vuejs.org/",
   "dependencies": {
     "@babel/helper-compilation-targets": "^7.12.16",
-    "@bjh/cli-shared-utils": "^0.0.2",
+    "@bjh/cli-shared-utils": "^0.0.3",
     "@soda/friendly-errors-webpack-plugin": "^1.8.0",
     "@soda/get-current-script": "^1.0.2",
     "@types/minimist": "^1.2.0",
